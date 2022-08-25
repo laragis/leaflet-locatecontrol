@@ -623,7 +623,9 @@ You can find the project at: https://github.com/domoritz/leaflet-locatecontrol
                 if (!this._circle) {
                     this._circle = L.circle(latlng, radius, style).addTo(this._layer);
                 } else {
-                    this._circle.setLatLng(latlng).setRadius(radius).setStyle(style);
+                    this._circle.setLatLng(latlng);
+                    this._circle.setRadius(radius);
+                    this._circle.setStyle(style);
                 }
             }
 
